@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشفى الشفاء - رعاية صحية متكاملة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-icon">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            <span class="loader-text">مستشفى الشفاء</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">مستشفى الشفاء</span>
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#about">عن المستشفى</a></li>
+                <li><a href="#departments">الأقسام</a></li>
+                <li><a href="#doctors">أطباؤنا</a></li>
+                <li><a href="#facilities">المرافق</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+966500000000" class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>966500000000+</span>
+                </a>
+                <a href="#appointment" class="btn-start">احجز موعدك الآن</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-effects">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="notification-badge">
+                    <span class="pulse"></span>
+                    وكيل ذكي متاح الآن لمساعدتك
+                </div>
+                <h1 class="hero-title">
+                    صحتك أمانة
+                    <span class="highlight">نحتضن صحتك بعناية</span>
+                </h1>
+                <p class="hero-description">
+                    مستشفى الشفاء يقدم لكم رعاية صحية شاملة بأحدث الأجهزة الطبية وأفضل الكوادر الطبية المتخصصة، مع وكيل ذكي يساعدكم على مدار الساعة.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        احجز موعدك الآن
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        اكتشف المزيد
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>+100 طبيب</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-hospital"></i>
+                        <span>+20 قسم</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-smile"></i>
+                        <span>98% رضا</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="chat-interface">
+                    <div class="chat-header">
+                        <div class="chat-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="chat-title">
+                            <i class="fas fa-robot"></i>
+                            وكيل الشفاء الذكي
+                        </div>
+                        <div class="chat-status">
+                            <span class="status-dot"></span>
+                            متصل الآن
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="avatar bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span>مرحباً بك في مستشفى الشفاء! كيف يمكنني مساعدتك اليوم؟</span>
+                        </div>
+                        <div class="message user-message">
+                            <span>أريد معرفة أقسام المستشفى</span>
+                            <div class="avatar user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="message bot-message">
+                            <div class="avatar bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span>لدينا أكثر من 20 قسم طبي متخصص، من أبرزها: القلب، العظام، الأطفال، النساء، الأسنان، العيون، والطوارئ.</span>
+                        </div>
+                        <div class="message user-message">
+                            <span>كيف أسجل موعد؟</span>
+                            <div class="avatar user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="message bot-message">
+                            <div class="avatar bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span>يمكنك حجز موعدك بسهولة عبر موقعنا أو بالاتصال على 966500000000+. كما يمكنني مساعدتك في الحجز الآن مباشرة.</span>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" class="chat-input" placeholder="اكتب رسالتك هنا..." id="chatInput">
+                        <button class="chat-send" id="chatSend">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="chat-typing">
+                        <span>يكتب...</span>
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-badge">عن المستشفى</span>
+                    <h2 class="section-title">مستشفى الشفاء <span class="highlight">لرعاية صحتك</span></h2>
+                    <p class="about-text">
+                        تأسس مستشفى الشفاء عام 1995 ويُعد من أبرز المراكز الطبية في المملكة العربية السعودية. نلتزم بتقديم أعلى معايير الرعاية الصحية لمرضانا من خلال فريق طبي مؤهل وأحدث الأجهزة الطبية العالمية.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>أكثر من 25 عاماً من الخبرة</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>فريق طبي دولي مؤهل</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>أحدث الأجهزة الطبية</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>خدمة طوارئ 24/7</span>
+                        </div>
+                    </div>
+                    <a href="#departments" class="btn-primary">
+                        <i class="fas fa-arrow-left"></i>
+                        تصفح أقسامنا
+                    </a>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hospital"></i>
+                        <span>مستشفى الشفاء</span>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">25+</span>
+                        <span class="text">عام من الخبرة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments-section" id="departments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">أقسامنا</span>
+                <h2 class="section-title">أقسام <span class="highlight">المستشفى</span></h2>
+                <p class="section-description">نوفر لك أفضل الأطباء المتخصصين في مختلف التخصصات الطبية</p>
+            </div>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>القلب والأوعية الدموية</h3>
+                    <p>تشخيص وعلاج أمراض القلب والسكتات الدماغية بأحدث التقنيات</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>العظام والمفاصل</h3>
+                    <p>علاج كسور وإصابات المفاصل والعمود الفقري وجراحات الاستبدال</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>طب الأطفال</h3>
+                    <p>رعاية صحية متكاملة للأطفال من الولادة حتى المراهقة</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>النساء والتوليد</h3>
+                    <p>رعاية صحية شاملة للمرأة والحوامل والولادة</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3>طب الأسنان</h3>
+                    <p>علاج وتركيبات الأسنان التجميلية والعلاجية</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>طب العيون</h3>
+                    <p>تشخيص وعلاج أمراض العيون والليزك والcataract</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number-large" data-target="50000">0</div>
+                    <div class="stat-label">مريض تم علاجه</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-number-large" data-target="100">0</div>
+                    <div class="stat-label">طبيب متخصص</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="stat-number-large" data-target="20">0</div>
+                    <div class="stat-label">قسم طبي</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="stat-number-large" data-target="300">0</div>
+                    <div class="stat-label">سرير متاح</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">أطباؤنا</span>
+                <h2 class="section-title">فريق <span class="highlight">الطبي المتميز</span></h2>
+                <p class="section-description">أطباء بخبرة واسعة وأعلى المؤهلات العلمية</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. أحمد محمد العلي</h3>
+                        <span class="doctor-specialty">استشاري القلب</span>
+                        <p>خبرة أكثر من 15 عاماً في جراحات القلب المفتوح</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. سارة عبدالرحمن الشمري</h3>
+                        <span class="doctor-specialty">استشارية الأطفال</span>
+                        <p>متخصصة في طب الأطفال الحديثي الولادة</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. خالد فهد العتيبي</h3>
+                        <span class="doctor-specialty">استشاري العظام</span>
+                        <p>خبرة في جراحات استبدال المفاصل والإصابات الرياضية</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. نورة سعد المطيري</h3>
+                        <span class="doctor-specialty">استشارية النساء</span>
+                        <p>متخصصة في العقم والمساعدات الإنجابية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section" id="facilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">مرافقنا</span>
+                <h2 class="section-title">مرافق <span class="highlight">حديثة ومتكاملة</span></h2>
+                <p class="section-description">بيئة صحية آمنة ومريحة لمرضانا</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h3>مركز الأشعة</h3>
+                    <p>أحدث أجهزة الأشعة والمقطعية والرنين المغناطيسي</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>المختبر</h3>
+                    <p>مختبر مجهز بالكامل لأسرع النتائج الدقيقة</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>الصيدلية</h3>
+                    <p>صيدلية متكاملة تعمل على مدار الساعة</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>خدمة الطوارئ</h3>
+                    <p>قسم طوارئ مجهز بالكامل 24/7</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>غرف العمليات</h3>
+                    <p>10 غرف عمليات مجهزة بأحدث التقنيات</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>التأهيل</h3>
+                    <p>مركز تأهيل مجهز لفترة النقاهة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-container">
+                <div class="appointment-content">
+                    <span class="section-badge">حجز موعد</span>
+                    <h2 class="section-title">احجز <span class="highlight">موعدك الآن</span></h2>
+                    <p class="appointment-text">تواصل معنا لحجز موعدك مع أفضل الأطباء المتخصصين</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span class="contact-label">للتواصل الهاتفي</span>
+                                <strong>966500000000+</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-label">الموقع</span>
+                                <strong>الرياض، حي العليا</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="contact-label">أوقات العمل</span>
+                                <strong>24 ساعة / 7 أيام</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appointment-form-container">
+                    <form class="appointment-form" id="appointmentForm">
+                        <h3>نموذج الحجز</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الجوال" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">اختر القسم</option>
+                                <option>القلب والأوعية الدموية</option>
+                                <option>العظام والمفاصل</option>
+                                <option>طب الأطفال</option>
+                                <option>النساء والتوليد</option>
+                                <option>طب الأسنان</option>
+                                <option>طب العيون</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            تأكيد الحجز
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h2>صحتك تبدأ من هنا</h2>
+                <p>تواصل مع وكيلنا الذكي الآن للحصول على استشارة مجانية أو لحجز موعدك</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary cta-btn">
+                        <i class="fas fa-comments"></i>
+                        تحدث مع الوكيل الذكي
+                    </a>
+                    <a href="tel:+966500000000" class="btn-secondary cta-btn">
+                        <i class="fas fa-phone-alt"></i>
+                        اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">مستشفى الشفاء</span>
+                        <div class="logo-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <p>مستشفى متعدد التخصصات يقدم رعاية صحية شاملة بأعلى معايير الجودة والأمان</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المستشفى</a></li>
+                        <li><a href="#departments">الأقسام</a></li>
+                        <li><a href="#doctors">أطباؤنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>الأقسام</h4>
+                    <ul>
+                        <li><a href="#">القلب</a></li>
+                        <li><a href="#">العظام</a></li>
+                        <li><a href="#">الأطفال</a></li>
+                        <li><a href="#">النساء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الرياض، حي العليا</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>966500000000+</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@alshafa-hospital.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مستشفى الشفاء. جميع الحقوق محفوظة.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button class="floating-chat-btn" id="floatingChatBtn">
+        <i class="fas fa-comments"></i>
+        <span>تحدث مع الوكيل</span>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
